@@ -1,27 +1,30 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-stone-100 text-slate-800 antialiased transition-colors duration-300
+           dark:bg-night-950 dark:text-slate-100;
+  }
+  ::selection {
+    @apply bg-gold-400/40;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .card {
+    @apply rounded-2xl border border-stone-200 bg-white/90 shadow-sm backdrop-blur-sm
+           dark:border-white/10 dark:bg-white/[0.04];
+  }
+  .btn-gold {
+    @apply rounded-xl bg-gradient-to-l from-gold-600 via-gold-500 to-gold-400
+           px-6 py-3 font-bold text-night-950 shadow-lg shadow-gold-500/25
+           transition hover:brightness-110 active:scale-[0.98]
+           disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .gold-text {
+    @apply bg-gradient-to-l from-gold-600 via-gold-500 to-gold-700 bg-clip-text text-transparent
+           dark:from-gold-200 dark:via-gold-400 dark:to-gold-600;
   }
 }
