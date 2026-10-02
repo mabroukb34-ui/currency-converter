@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.mabroukb34.currencyconverter",
+        "sha256_cert_fingerprints": ["43:28:8D:8F:D9:FE:6C:84:8D:89:5E:4E:E0:6C:0E:F4:CA:37:7D:58:EB:A3:8E:A7:5B:86:3D:5B:CB:CD:2C:96"]
+      }
+    }]
